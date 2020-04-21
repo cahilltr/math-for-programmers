@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'scala'
+    id 'maven'
+}
+
+group 'com.cahill'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.12.8'
+    testCompile "org.scalatest:scalatest_2.12:3.0.3"
+}
