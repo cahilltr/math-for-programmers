@@ -67,4 +67,28 @@ class MatrixFunctionsTest extends FunSuite {
     )
     assert(resultMatrix.equals(expectedMatrix))
   }
+
+  test("different size matrixes") {
+    val m1: Matrix[Int] = Matrix(
+      List(
+        Vector[Int](-1, -2, 1),
+        Vector[Int](-1, 1, 0),
+        Vector[Int](0, 2, -1)
+      )
+    )
+
+    val m2: Matrix[Int] = Matrix(
+      List(
+        Vector[Int](1, 1, 1)
+      )
+    )
+
+    val resultMatrix = MatrixFunctions.multiplyMatrixMatrix(m1, m2)
+    val expectedMatrix = Matrix(
+      List(
+        Vector[Int](-2, 1, 0)
+      )
+    )
+    assert(resultMatrix.equals(expectedMatrix))
+  }
 }
